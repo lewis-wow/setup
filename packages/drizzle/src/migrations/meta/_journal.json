@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1725389062397,
+      "tag": "0000_flippant_whistler",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1726475063694,
+      "tag": "0001_add_posts",
+      "breakpoints": true
+    }
+  ]
+}

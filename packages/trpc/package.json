@@ -1,0 +1,54 @@
+{
+  "name": "@repo/trpc",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./router": "./dist/server/routes/index.js",
+    "./fetchRequestHandler": "./dist/server/fetchRequestHandler.js",
+    "./trpcNextServerClient": "./dist/trpcNextServerClient.js",
+    "./trpcReactClient": "./dist/trpcReactClient.js"
+  },
+  "scripts": {
+    "build": "run-s build:tsup build:tsc",
+    "build:tsup": "tsup",
+    "build:tsc": "tsc --emitDeclarationOnly",
+    "test": "dotenvx run -f ../../.env.test -- vitest run",
+    "test:watch": "dotenvx run -f ../../.env.test -- vitest",
+    "dotenvx": "dotenvx"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.14.1",
+    "@repo/test": "workspace:*",
+    "@repo/tsup": "workspace:*",
+    "@repo/types": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/react": "18.3.5",
+    "next-auth": "5.0.0-beta.20",
+    "npm-run-all": "^4.1.5",
+    "tslib": "^2.7.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.0"
+  },
+  "dependencies": {
+    "@repo/authjs": "workspace:*",
+    "@repo/drizzle": "workspace:*",
+    "@repo/env": "workspace:*",
+    "@repo/validation": "workspace:*",
+    "@tanstack/react-query": "^5.56.2",
+    "@trpc/client": "11.0.0-rc.502",
+    "@trpc/next": "11.0.0-rc.502",
+    "@trpc/react-query": "11.0.0-rc.502",
+    "@trpc/server": "11.0.0-rc.502",
+    "client-only": "^0.0.1",
+    "drizzle-orm": "0.33.0",
+    "server-only": "^0.0.1",
+    "superjson": "^2.2.1",
+    "zod": "^3.23.8"
+  },
+  "peerDependencies": {
+    "next": "14.2.6",
+    "react": "^18.2.0"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "setup",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "prettier:check": "./node_modules/.bin/prettier --check \"**/*.{ts,tsx}\"",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "db:start": "pnpm --filter @repo/drizzle exec -- docker compose up",
+    "env:encrypt": "dotenvx encrypt -f .env.production",
+    "dotenvx": "dotenvx"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.14.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+    "@types/node": "^22.5.2",
+    "prettier": "^3.2.5",
+    "turbo": "^2.1.1",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=18"
+  },
+  "pnpm": {
+    "overrides": {
+      "drizzle-orm": "0.33.0"
+    }
+  }
+}

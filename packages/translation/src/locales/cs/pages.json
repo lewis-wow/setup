@@ -1,0 +1,12 @@
+{
+  "posts": {
+    "create": {
+      "titleField": {
+        "label": "Název"
+      },
+      "contentField": {
+        "label": "Obsah"
+      }
+    }
+  }
+}

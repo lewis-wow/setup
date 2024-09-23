@@ -1,0 +1,14 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "outDir": "dist",
+    "rootDir": "src",
+    "baseUrl": ".",
+    "jsx": "react-jsx"
+  },
+  "include": ["src", "../../packages/types/src/authjs.d.ts"],
+  "exclude": ["node_modules"]
+}

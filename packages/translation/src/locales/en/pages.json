@@ -1,0 +1,12 @@
+{
+  "posts": {
+    "create": {
+      "titleField": {
+        "label": "Title"
+      },
+      "contentField": {
+        "label": "Content"
+      }
+    }
+  }
+}

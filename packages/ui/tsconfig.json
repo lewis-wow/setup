@@ -1,0 +1,16 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "rootDir": "src",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "verbatimModuleSyntax": false,
+    "jsx": "react-jsx",
+    "lib": ["es2022", "dom", "dom.iterable"]
+  },
+  "include": ["src", "../../packages/translation/src/i18n.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}

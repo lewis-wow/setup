@@ -1,0 +1,37 @@
+{
+  "name": "@repo/drizzle",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./dist/client.js",
+    "./schema": "./dist/schema/index.js"
+  },
+  "scripts": {
+    "build": "run-s build:tsup build:tsc",
+    "build:tsup": "tsup",
+    "build:tsc": "tsc --emitDeclarationOnly",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "db:generate": "drizzle-kit generate",
+    "dotenvx": "dotenvx"
+  },
+  "devDependencies": {
+    "@repo/tsup": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.5.2",
+    "@types/pg": "^8.11.8",
+    "dotenv-cli": "^7.4.2",
+    "drizzle-kit": "^0.24.2",
+    "next-auth": "5.0.0-beta.20",
+    "npm-run-all": "^4.1.5",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "@dotenvx/dotenvx": "^1.14.1"
+  },
+  "dependencies": {
+    "@repo/env": "workspace:*",
+    "drizzle-orm": "0.33.0",
+    "pg": "^8.12.0"
+  }
+}

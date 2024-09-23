@@ -1,0 +1,43 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "dotenvx run -f ../../.env.development -- next dev",
+    "build": "dotenvx run -f ../../.env.development -- next build",
+    "start": "dotenvx run -- next start",
+    "lint": "dotenvx run -- next lint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@repo/authjs": "workspace:*",
+    "@repo/env": "workspace:*",
+    "@repo/translation": "workspace:*",
+    "@repo/trpc": "workspace:*",
+    "@repo/ui": "workspace:*",
+    "@repo/validation": "workspace:*",
+    "@tanstack/react-query": "^5.56.2",
+    "@tanstack/react-table": "^8.20.5",
+    "next": "14.2.6",
+    "next-auth": "5.0.0-beta.20",
+    "next-intl": "^3.19.0",
+    "react": "^18.2.0",
+    "react-dom": "18.3.1",
+    "react-hook-form": "^7.53.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.14.1",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^20",
+    "@types/react": "18.3.5",
+    "@types/react-dom": "^18",
+    "concurrently": "^8.2.2",
+    "dotenv-cli": "^7.4.2",
+    "env-cmd": "^10.1.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.6",
+    "typescript": "^5.5.4"
+  }
+}
